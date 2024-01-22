@@ -1,0 +1,86 @@
+.userDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #4c669f, #3b5998);
+  color: #fff;
+  padding: 20px;
+}
+
+.userCard,
+.repoCard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.repoCard {
+  text-align: center;
+  overflow: auto;
+}
+
+.repoCard h3 {
+  color: #333;
+}
+
+.repositories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.repositoryCard {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.repositoryCard a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.repositoryCard a:hover {
+  color: #007bff;
+}
+
+@media (min-width: 600px) {
+  .userDetailsContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    width: calc(100% - 40px);
+  }
+
+  .repositories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .repositories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .repositories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
